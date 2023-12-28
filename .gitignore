@@ -1,3 +1,8 @@
+# ICP project
+.azle
+.dfx
+*.did
+
 # Logs
 logs
 *.log
