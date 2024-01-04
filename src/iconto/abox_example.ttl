@@ -1,10 +1,10 @@
 
 iconto:t1 a iconto:Transaction ;
-    iconto:hasTransactionHash d12088742ca6a89e7df0b1058a98ed3dbc1a081b6d5d56f4d444f75a8ec9702b ;
+    iconto:hasTransactionHash "d12088742ca6a89e7df0b1058a98ed3dbc1a081b6d5d56f4d444f75a8ec9702b" ;
     iconto:hasTransactionAmount 0.01123596 ;
     iconto:hasTransactionFee 0.0001 ;
-    iconto:hasTransactionType "Transfer" ;
-    iconto:hasTransactionStatus "Success" ;
+    iconto:hasTransactionType "transfer" ;
+    iconto:hasTransactionStatus "success" ;
     iconto:hasTransactionTimestamp "2024-01-04T14:29:04";
     iconto:hasTransactionFrom "cd7dc26184127071483bb52dc80b178e7c1c530294d7049c61f30c90cf86921b" ;
     iconto:hasTransactionTo "11bc28f9d1c18d041a0d0f98f16d601ac2f115c1a3bd74fff05a842711477424" .

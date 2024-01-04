@@ -19,7 +19,7 @@
 	dc:title "ICOnto - An ontology for the Internet Computer ecosystem" ;
 	vann:preferredNamespacePrefix "iconto" ;
 	rdfs:comment "This ontology specification uses W3C RDF Schema and the Web Ontology Language. Its main source of information comes from IC official documentation."@en ;
-	rdfs:seeAlso <https://github.com/mobr-ai/ICOnto> , <https://wiki.polkadot.network/> ;
+	rdfs:seeAlso <https://github.com/mobr-ai/ICOnto> , <https://internetcomputer.org> ;
 	owl:versionInfo "0.0.1" ;
 	ns:term_status "unstable" ;
     dc:license <https://www.apache.org/licenses/LICENSE-2.0> .

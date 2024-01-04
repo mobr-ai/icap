@@ -1,10 +1,11 @@
 import { Store, parse, SPARQLToQuery } from 'rdflib'
 
+//in-memory triplestore
 var tStore
 
 function initStore(iconto) {
     tStore = new Store()
-    var uri = 'http://www.mobr.ai/ontologies/ponto#'
+    var uri = 'http://www.mobr.ai/ontologies/iconto#'
     var mimeType = 'text/turtle'
 
     try {

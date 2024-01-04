@@ -1,7 +1,7 @@
 import { Canister, query, text, update, Void } from 'azle'
 import { initStore, queryStore } from './triplestore.js'
 
-// This is a global variable that is stored on the heap
+// in-memory turtle specification
 let iconto = ''
 
 export default Canister({
@@ -21,5 +21,3 @@ export default Canister({
         return bindings
     })
 })
-
-// PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX ponto: <http://www.mobr.ai/ontologies/ponto#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT ?s WHERE { ?s ?p ?o . }
