@@ -3,6 +3,9 @@
 .dfx
 *.did
 
+# Apple
+.DS_Store
+
 # Logs
 logs
 *.log

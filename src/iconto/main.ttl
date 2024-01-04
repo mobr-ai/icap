@@ -1,0 +1,187 @@
+@prefix iconto: <http://www.mobr.ai/ontologies/iconto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.mobr.ai/ontologies/iconto#> .
+
+<http://www.mobr.ai/ontologies/iconto#> a owl:Ontology ;
+	owl:versionIRI <http://www.mobr.ai/ontologies/iconto/v0/> ;
+	owl:imports <http://www.w3.org/2003/06/sw-vocab-status/ns> ;
+	dc:contributor "Marcio Moreno" , "Rafael Brandao" ;
+	dc:creator "MOBR Systems" ;
+	dc:title "ICOnto - An ontology for the Internet Computer ecosystem" ;
+	vann:preferredNamespacePrefix "iconto" ;
+	rdfs:comment "This ontology specification uses W3C RDF Schema and the Web Ontology Language. Its main source of information comes from IC official documentation."@en ;
+	rdfs:seeAlso <https://github.com/mobr-ai/ICOnto> , <https://wiki.polkadot.network/> ;
+	owl:versionInfo "0.0.1" ;
+	ns:term_status "unstable" ;
+    dc:license <https://www.apache.org/licenses/LICENSE-2.0> .
+
+<https://www.apache.org/licenses/LICENSE-2.0>
+    rdf:type dcterms:LicenseDocument ;
+    skos:prefLabel "Apache License v2" ;
+    dc:title "Apache License, Version 2.0" .
+
+
+iconto:Account a owl:Class ;
+    skos:prefLabel "Account" ;
+    skos:altLabel "Address" ;
+    rdfs:comment "A set of entries in the ledger canister." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Actor a owl:Class ;
+    skos:prefLabel "Actor" ;
+    rdfs:comment "An actor is a primitive in the actor model. It is a process with encapsulated state that communicates with other concurrently running actors through asynchronous messages that are received sequentially. The actor model is relevant to the ICP because canisters on ICP (a type of smart contract) follow the actor model for concurrent and asynchronous computation." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Balance a owl:Class ;
+    skos:prefLabel "Balance" ;
+    skos:altLabel "Account Balance" ;
+    rdfs:comment "The balance of an account on the ledger is the sum of all deposits minus the sum of all withdrawals. As a degenerate case, it is sometimes useful to say that an account which is not present in the ledger has a balance of zero. The balance of a ledger account is denominated in ICP and is represented with eight decimals. Thus, the minimum positive balance of an account is 0.00000001 or 10^-8 ICP; this amount is sometimes referred to as one e8." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Beneficiary a owl:Class ;
+    skos:prefLabel "Beneficiary" ;
+    rdfs:comment "The principal who owns the balance of the account. The beneficiary of an account cannot be changed. The beneficiary of an account may or may not be allowed to make transactions on the account (see fiduciary)." ;
+    rdfs:subClassOf iconto:Principal .
+
+
+iconto:Blockchain a owl:Class ;
+    skos:prefLabel "Blockchain" ;
+    rdfs:comment "A blockchain is a growing list of cryptographically linked blocks, agreed upon by consensus. On the Internet Computer, every subnet maintains its own blockchain with blocks containing messages for the canisters hosted on this subnet. These blockchains interact using chain key cryptography." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Canister a owl:Class ;
+    skos:prefLabel "Canister" ;
+    rdfs:comment "A canister is a type of smart contract that bundles code and state. A canister can be deployed as a smart contract on the Internet Computer and accessed over the Internet." ;
+    rdfs:subClassOf iconto:SmartContract .
+
+
+iconto:Identity a owl:Class ;
+    skos:prefLabel "Identity" ;
+    rdfs:comment "Byte string that is used to identify an entity, such as a principal, that interacts with the Internet Computer. For users, the identity is the SHA-224 hash of the DER-encoded public key of the user." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Node a owl:Class ;
+    skos:prefLabel "Node" ;
+    rdfs:comment "A node is a physical hardware device run by independent [node providers]. It hosts all the hardware, replica software, and configuration settings required to participate in the Internet Computer." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Principal a owl:Class ;
+    skos:prefLabel "Principal" ;
+    skos:altLabel "Security Principal" ;
+    rdfs:comment "A principal is an entity that can be authenticated by the Internet Computer." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:SmartContract a owl:Class ;
+    skos:prefLabel "SmartContract" ;
+    rdfs:comment "A smart contract is a stateful computer program designed to automatically execute, control or document relevant events and actions according to the terms of a contract or an agreement. A smart contract can be deployed on the Internet Computer in the form of a canister bundling data and code. A canister can have one or more controllers that are permitted to modify the code of the canister, thereby modifying the terms of the smart contract. For a canister smart contract to have immutable code, its list of controllers must be empty." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Subnet a owl:Class ;
+    skos:prefLabel "Subnet" ;
+    rdfs:comment "A collection of nodes that run their own instance of the consensus algorithm to produce a subnet blockchain that interacts with other subnets of ICP using chain key cryptography." ;
+    rdfs:subClassOf owl:Thing .
+
+
+iconto:Transaction a owl:Class ;
+    skos:prefLabel "Transaction" ;
+    rdfs:comment "A ledger account transaction is the process of transferring ICP from one account to another." ;
+    rdfs:subClassOf owl:Thing .
+
+
+#Account
+iconto:registeredIn a owl:ObjectProperty ;
+    rdfs:domain iconto:Account ; 
+    rdfs:range iconto:Canister .
+
+iconto:hasAccountOwner a owl:ObjectProperty ;
+    rdfs:domain iconto:Account ; 
+    rdfs:range iconto:Principal .
+
+iconto:hasAccountBalance a owl:ObjectProperty ;
+    rdfs:domain iconto:Account ;
+    rdfs:range iconto:Balance .
+
+
+#Canister
+iconto:hasCanisterId a owl:DatatypeProperty ;
+    rdfs:domain iconto:Canister ;
+    rdfs:range xsd:string .
+
+iconto:hasCanisterController a owl:DatatypeProperty ;
+    rdfs:domain iconto:Canister ;
+    rdfs:range xsd:string .
+
+iconto:hasHostedSubnetId a owl:DatatypeProperty ;
+    rdfs:domain iconto:Canister ;
+    rdfs:range xsd:string .
+
+
+#Principal
+iconto:hasPrincipalIdentity a owl:ObjectProperty ;
+    rdfs:domain iconto:Principal ;
+    rdfs:range iconto:Identity .
+
+
+#Subnet
+iconto:hasSubnetId a owl:DatatypeProperty ;
+    rdfs:domain iconto:Subnet ;
+    rdfs:range xsd:string .
+
+iconto:hasSubnetType a owl:DatatypeProperty ;
+    rdfs:domain iconto:Subnet ;
+    rdfs:range xsd:string .
+
+iconto:hasSubnetNode a owl:ObjectProperty ;
+    rdfs:domain iconto:Subnet ;
+    rdfs:range iconto:Node .
+
+
+#Transaction
+iconto:hasTransactionHash a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:string .
+
+iconto:hasTransactionAmount a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:decimal .
+
+iconto:hasTransactionFee a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:decimal .
+
+iconto:hasTransactionType a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:string .
+
+iconto:hasTransactionStatus a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:string .
+
+iconto:hasTransactionTimestamp a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:dateTimeStamp .
+
+iconto:hasTransactionFrom a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:string .
+
+iconto:hasTransactionTo a owl:DatatypeProperty ;
+    rdfs:domain iconto:Transaction ;
+    rdfs:range xsd:string .
