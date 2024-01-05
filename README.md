@@ -1,6 +1,10 @@
 # icap
 ICAP: a platform for users to retrieve and analyze data from various sources in the ICP
 
+# how to run
+npm build
+dfx deploy
+
 # Issues found:
 From the Glossary available in https://internetcomputer.org/docs/current/references/glossary :
  1) Broken Link on Principal word to wikipedia:

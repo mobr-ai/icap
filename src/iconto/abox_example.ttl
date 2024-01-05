@@ -1,10 +1,91 @@
+iconto:5482c4d1a0a98f2620368b92dd5f84337ba76b201f5d5526de2ae9ba7885b205 a iconto:Transaction ;
+iconto:hasTransactionHash "5482c4d1a0a98f2620368b92dd5f84337ba76b201f5d5526de2ae9ba7885b205" ;
+iconto:hasTransactionFrom "16c032b26755447a88412a3d34185a7a500831c656aa3f406d8fe16fafc9225f" ;
+iconto:hasTransactionTo "acd76fff0536f863d9dd4b326a1435466f82305758b4b1b4f62ff9fa81c14073" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 445.99998200 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:26" .
+iconto:4f5a006954396da5cc5623eb0922db2f1929574d78694e1bece988c74e91f5e8 a iconto:Transaction ;
+iconto:hasTransactionHash "4f5a006954396da5cc5623eb0922db2f1929574d78694e1bece988c74e91f5e8" ;
+iconto:hasTransactionFrom "4e7d788cb7e7f1316d4af782181597811246b59019aa150315db8d526c990a38" ;
+iconto:hasTransactionTo "df545fc989d1304d41b43840480c0fd382db3636a1749270f3f0b7dc44fe6b15" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 1.26516379 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:24" .
+iconto:2024b419a21eca56cab5fe8f5114d2b27ea2080d4cddb5f1ef247e6cd57d1e0d a iconto:Transaction ;
+iconto:hasTransactionHash "2024b419a21eca56cab5fe8f5114d2b27ea2080d4cddb5f1ef247e6cd57d1e0d" ;
+iconto:hasTransactionFrom "800f05141f4b011def5aadc15c897f9fbab07e50a49878bfd49c3ebe8d02d31a" ;
+iconto:hasTransactionTo "90a252a0fc9a3ef9b5184abff9329e0a5eb3725396b5cd5ae20622482b79f5b4" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 0.13000000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:24" .
+iconto:e44d8304973928568a4a1cdb86f08b83494fa87767fc5e596ed4973664bf8180 a iconto:Transaction ;
+iconto:hasTransactionHash "e44d8304973928568a4a1cdb86f08b83494fa87767fc5e596ed4973664bf8180" ;
+iconto:hasTransactionFrom "cd7dc26184127071483bb52dc80b178e7c1c530294d7049c61f30c90cf86921b" ;
+iconto:hasTransactionTo "c31b8efc08b9816b77b26ab1f4801fffb33791651afcc02d25fc5ae1f4bddd26" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 0.00108179 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:18" .
+iconto:ec171a8d2797d733113cea9a04e83a904f5a65cdb619c9add8cfc05fb32e2f0e a iconto:Transaction ;
+iconto:hasTransactionHash "ec171a8d2797d733113cea9a04e83a904f5a65cdb619c9add8cfc05fb32e2f0e" ;
+iconto:hasTransactionFrom "d3dc4ded6065116a1bac3f55825b3d20e0f0b6b9af60a53b6ad28fd6c610dde0" ;
+iconto:hasTransactionTo "16d7edf4f38e5918363b81b6d28282500003a3c0f4b85183fb4cf4995f74e4b2" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 3.00000000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:18" .
+iconto:46e775ab897145040daf1f914e5a0a7dd524a8903035cf5d659ab79731eed6b4 a iconto:Transaction ;
+iconto:hasTransactionHash "46e775ab897145040daf1f914e5a0a7dd524a8903035cf5d659ab79731eed6b4" ;
+iconto:hasTransactionFrom "a7c850e79ea86909860fd83b24697a0c63b09a06875a590391265a5cc7075ed6" ;
+iconto:hasTransactionTo "11387937a9c3783fba1a355f644e27d1a460ad1b5b74b0600d5a947ba43a0b20" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 2317.92740000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:17" .
+iconto:6fdfcb8c4c8b3cd0319b50ea8afba480aa3f0fcb3c29a6795050682c6fdab1ad a iconto:Transaction ;
+iconto:hasTransactionHash "6fdfcb8c4c8b3cd0319b50ea8afba480aa3f0fcb3c29a6795050682c6fdab1ad" ;
+iconto:hasTransactionFrom "acd76fff0536f863d9dd4b326a1435466f82305758b4b1b4f62ff9fa81c14073" ;
+iconto:hasTransactionTo "f35874a5a4db2886669e364efbe1de2d65700b251350910a3e19ba827ff3b391" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 74.47993248 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:15" .
+iconto:e0ec7004700652391d4763c4ba1a952ebe44e30537f86089fa8ca6b6ab129e7f a iconto:Transaction ;
+iconto:hasTransactionHash "e0ec7004700652391d4763c4ba1a952ebe44e30537f86089fa8ca6b6ab129e7f" ;
+iconto:hasTransactionFrom "c0e1608e123fd1023865e6c0f8fe59dd61fcaae1cd39d2e11ef66640caa8f591" ;
+iconto:hasTransactionTo "8d0c2f4fcd4026a87e7a49f5b7e6c7c77cc5f647860a4d17fbb0c652d23eb1d2" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 0.00000000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:14" .
+iconto:237368ae6b15d6e0536e7758dc9355e2136bcae126e1466c38bfb5f899e04a3f a iconto:Transaction ;
+iconto:hasTransactionHash "237368ae6b15d6e0536e7758dc9355e2136bcae126e1466c38bfb5f899e04a3f" ;
+iconto:hasTransactionFrom "e2bed785b5163652ef400bb507340a80df6f473b21da4e8d2dee802a6df2784e" ;
+iconto:hasTransactionTo "f7a1dfaa63109ac028057200bfed647cf63a3fd584319a85d9ff77f882bc67c4" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 0.00000000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:12" .
+iconto:744efd6fee308c42efb582e9957e2c212db942b70ff6425e754257ab90a8bd29 a iconto:Transaction ;
+iconto:hasTransactionHash "744efd6fee308c42efb582e9957e2c212db942b70ff6425e754257ab90a8bd29" ;
+iconto:hasTransactionFrom "4c9432f72bd80bc28fd7b02e78887d8c4722d079d65c2899977734f447f71cb9" ;
+iconto:hasTransactionTo "86d9950358864628d43cda7d0179baff46911ca7696fd5f09c5404d4fad31a29" ;
+iconto:hasTransactionType "transfer" ;
+iconto:hasTransactionStatus "completed" ;
+iconto:hasTransactionAmount 1.00000000 ;
+iconto:hasTransactionFee 0.00010000 ;
+iconto:hasTransactionTimestamp "2024-01-05T15:20:10" .
 
-iconto:t1 a iconto:Transaction ;
-    iconto:hasTransactionHash "d12088742ca6a89e7df0b1058a98ed3dbc1a081b6d5d56f4d444f75a8ec9702b" ;
-    iconto:hasTransactionAmount 0.01123596 ;
-    iconto:hasTransactionFee 0.0001 ;
-    iconto:hasTransactionType "transfer" ;
-    iconto:hasTransactionStatus "success" ;
-    iconto:hasTransactionTimestamp "2024-01-04T14:29:04";
-    iconto:hasTransactionFrom "cd7dc26184127071483bb52dc80b178e7c1c530294d7049c61f30c90cf86921b" ;
-    iconto:hasTransactionTo "11bc28f9d1c18d041a0d0f98f16d601ac2f115c1a3bd74fff05a842711477424" .
