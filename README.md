@@ -2,8 +2,14 @@
 ICAP: a platform for users to retrieve and analyze data from various sources in the ICP
 
 # how to run
-npm build
-dfx deploy
+We should install Azle and all of its dependencies:
+npm install
+
+Start up your local replica:
+dfx start --background
+
+Deploy your canister:
+dfx deploy icap
 
 # Issues found:
 From the Glossary available in https://internetcomputer.org/docs/current/references/glossary :
