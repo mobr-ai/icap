@@ -13,9 +13,12 @@ dfx deploy icap
 
 # Issues found:
 From the Glossary available in https://internetcomputer.org/docs/current/references/glossary :
- 1) Broken Link on Principal word to wikipedia:
+ 1) Broken Link on the "Principal" word to wikipedia when defining Principal:
     stated as: https://en.wikipedia.org/wiki/Principal-(computer-security)
     should be replaced by: https://en.wikipedia.org/wiki/Principal_(computer_security)
- 2) Broken Link on Actor word to wikipedia:
+ 2) Broken Link on the "actor model" word to wikipedia when defining Actor:
     stated as: https://en.wikipedia.org/wiki/Actor-model 
     should be replaced by: https://en.wikipedia.org/wiki/Actor_model
+ 3) Broken Link on the "messages" word when defining Batch:
+    stated as: https://internetcomputer.org/docs/current/references/glossary#messages
+    should be replaced by: https://internetcomputer.org/docs/current/references/glossary#message 
