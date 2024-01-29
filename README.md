@@ -1,15 +1,21 @@
 # icap
-ICAP: a platform for users to retrieve and analyze data from various sources in the ICP
+
+ICAP: a platform for users to retrieve structured knowledge based on data from various sources in the ICP
 
 # how to run
-npm build
+
+dfx start --background
+dfx canister create icap
+dfx build
 dfx deploy
 
 # Issues found:
+
 From the Glossary available in https://internetcomputer.org/docs/current/references/glossary :
- 1) Broken Link on Principal word to wikipedia:
+
+1.  Broken Link on Principal word to wikipedia:
     stated as: https://en.wikipedia.org/wiki/Principal-(computer-security)
     should be replaced by: https://en.wikipedia.org/wiki/Principal_(computer_security)
- 2) Broken Link on Actor word to wikipedia:
-    stated as: https://en.wikipedia.org/wiki/Actor-model 
+2.  Broken Link on Actor word to wikipedia:
+    stated as: https://en.wikipedia.org/wiki/Actor-model
     should be replaced by: https://en.wikipedia.org/wiki/Actor_model
