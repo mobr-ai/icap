@@ -20,7 +20,7 @@
 	vann:preferredNamespacePrefix "iconto" ;
 	rdfs:comment "This ontology specification uses W3C RDF Schema and the Web Ontology Language. Its main source of information comes from IC official documentation."@en ;
 	rdfs:seeAlso <https://github.com/mobr-ai/ICOnto> , <https://internetcomputer.org> ;
-	owl:versionInfo "0.0.1" ;
+	owl:versionInfo "0.0.2" ;
 	ns:term_status "unstable" ;
     dc:license <https://www.apache.org/licenses/LICENSE-2.0> .
 
