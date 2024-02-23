@@ -122,7 +122,7 @@ function queryStore(strSparql) {
                 }
             }
             if (strRow != "") {
-                strRes = strRes + i.toString() + ": {" + strRow + "}"
+                strRes = strRes + '"' + i.toString() + '"' + ": {" + strRow + "}"
             }    
         }
         return strRes + "}"
