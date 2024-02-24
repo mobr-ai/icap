@@ -7,6 +7,27 @@
             "build": "npx azle icap",
             "wasm": ".azle/icap/icap.wasm",
             "gzip": true
+        },
+        "icap_frontend": {
+            "dependencies": [
+                "icap"
+            ],
+            "frontend": {
+                "entrypoint": "src/icap_frontend/src/index.html"
+            },
+            "source": [
+                "src/icap_frontend/assets",
+                "dist/icap_frontend/"
+            ],
+            "type": "assets"
         }
-    }
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
+    },
+    "output_env_file": ".env",
+    "version": 1
 }

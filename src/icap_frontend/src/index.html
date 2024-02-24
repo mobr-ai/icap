@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>icap</title>
+    <base href="/" />
+    <link rel="icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link type="text/css" rel="stylesheet" href="prism.css" />
+  </head>
+  <body>
+    <main>
+      <img src="icap.png" alt="ICAP logo" />
+      <br />
+      <br />
+      <div id="editor-container">
+        <form action="#">
+          <label for="query">SPARQL query</label>
+          <!-- <input id="query" alt="Query" type="text" /> -->
+          <!-- <textarea id="query" name="query" rows="16" cols="200"></textarea> -->
+          <div id="query" contenteditable="true" spellcheck="false"></div>
+
+          <button type="submit">Send!</button>
+        </form>
+        <section id="results">
+          <table id="result-table"></table>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
