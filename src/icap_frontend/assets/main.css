@@ -43,10 +43,7 @@ button[type="submit"] {
   font-size: 12px;
   overflow: auto;
   line-height: 1.5;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-between;
-  justify-content: space-between;
+  display: inline;
 }
 
 #query pre {
