@@ -74,7 +74,7 @@ function highlight(event){
   const html = Prism.highlight(query, Prism.languages.sparql, 'sparql');
 
   // Set formated html
-  document.getElementById("query").innerHTML = '<pre><code>'+html+'</code></pre>';
+  document.getElementById("query").innerHTML = '<div><pre><code>'+html+'</code></pre></div>';
 
   restoreCaret();
 }
