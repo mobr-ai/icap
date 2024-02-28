@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   font-size: 1.5rem;
@@ -32,6 +36,24 @@ label {
   color: lightblue;
 }
 
+.topbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.links {
+  font-size: 14px;
+  font-family: monospace;
+  color: lightblue;
+}
+.links a {
+  font-size: 14px;
+  font-family: monospace;
+  margin-right: 2vh;
+  color: lightblue;
+}
+
 button[type="submit"] {
   padding: 5px 20px;
   margin: 10px auto;
@@ -47,6 +69,7 @@ button:hover {
   border-color: #ffffff;
   color: #ffffff;
   cursor: pointer;
+  overflow: hidden;
 }
 
 button:disabled,
@@ -211,6 +234,7 @@ body {
   width: 100%;
   max-height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .circles li {
@@ -221,7 +245,7 @@ body {
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
-  bottom: 0px;
+  bottom: 0vh;
 }
 
 .circles li:nth-child(1) {
