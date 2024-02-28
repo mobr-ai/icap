@@ -16,8 +16,9 @@ img {
   max-height: 14vh;
   display: block;
   margin: auto;
-  z-index: 1;
+  z-index: 0;
   position: relative;
+  visibility: hidden;
 }
 
 form {
@@ -222,7 +223,7 @@ th:nth-child(1) {
 }
 
 #logo {
-  animation: 0.3s ease 0s 1 slideInFromLeft;
+  animation: 0.5s ease 0s 1 slideInFromLeft;
 }
 
 /*Animated background*/
