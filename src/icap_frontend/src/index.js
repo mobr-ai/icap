@@ -142,10 +142,12 @@ var animate = true;
 function toggleAnimation(){
   if(!animate){
     document.querySelector("body > main > div > ul").style.display = "";
+    document.querySelector("#toggle-animation").innerHTML = "Hide Background";
     animate = true;
   }
   else {
     document.querySelector("body > main > div > ul").style.display = "none";
+    document.querySelector("#toggle-animation").innerHTML = "Show Background";
     animate = false;
   }
 }
