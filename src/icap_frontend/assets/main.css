@@ -211,6 +211,20 @@ th:nth-child(1) {
   border-radius: 10px;
 }
 
+/*Logo animation*/
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#logo {
+  animation: 0.3s ease 0s 1 slideInFromLeft;
+}
+
 /*Animated background*/
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
 
