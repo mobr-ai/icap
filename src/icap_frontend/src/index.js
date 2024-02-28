@@ -138,7 +138,26 @@ function displayResults(result){
   }
 }
 
+var animate = true;
+function toggleAnimation(){
+  if(!animate){
+    document.querySelector("body > main > div > ul").style.display = "";
+    animate = true;
+  }
+  else {
+    document.querySelector("body > main > div > ul").style.display = "none";
+    animate = false;
+  }
+}
+
 // add event handlers
+document.querySelector("img").addEventListener("mouseover", function(evt){
+  this.src='icap.gif';
+});
+document.querySelector("img").addEventListener("mouseout", function(evt){
+  this.src='icap.png';
+});
+
 document.getElementById("query").addEventListener("keydown", function (evt) {
   if (evt.key == "Enter" && !evt.shiftKey) {
     evt.preventDefault();
@@ -151,6 +170,8 @@ document.getElementById("query").addEventListener("keydown", function (evt) {
 });
 
 document.getElementById("query").addEventListener("input", highlight);
+
+document.getElementById("toggle-animation").addEventListener("click", toggleAnimation);
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();

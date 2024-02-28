@@ -16,6 +16,8 @@ img {
   max-height: 9.5vw;
   display: block;
   margin: auto;
+  z-index: 1;
+  position: relative;
 }
 
 form {
@@ -42,6 +44,9 @@ label {
   justify-content: space-between;
 }
 
+.link-set {
+  display: inline-flex;
+}
 .links {
   font-size: 14px;
   font-family: monospace;
