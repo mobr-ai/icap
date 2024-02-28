@@ -12,8 +12,7 @@
   <body>
     <main>
       <div class="area scrollbar">
-        <ul class="circles">
-          <img src="icap.png" alt="ICAP logo" />
+        <img src="icap.png" alt="ICAP logo" />
         <br />
         <br />
         <div id="editor-container">
@@ -22,8 +21,7 @@
               <label for="query">SPARQL Query</label>
               <div class="links"><a target="_blank" href="https://mobr.ai/iconto">ICOnto Ontology</a></div>
             </div>
-            <!-- <input id="query" alt="Query" type="text" /> -->
-            <!-- <textarea id="query" name="query" rows="16" cols="200"></textarea> -->
+
             <div id="query" contenteditable="true" spellcheck="false"></div>
 
             <button type="submit">Send!</button>
@@ -31,7 +29,8 @@
           <section id="results" class="scrollbar">
             <table id="result-table"></table>
           </section>
-
+        </div>
+        <ul class="circles">
           <li></li>
           <li></li>
           <li></li>

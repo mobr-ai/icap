@@ -46,12 +46,14 @@ label {
   font-size: 14px;
   font-family: monospace;
   color: lightblue;
+  z-index: 1;
 }
 .links a {
   font-size: 14px;
   font-family: monospace;
   margin-right: 2vh;
   color: lightblue;
+  z-index: 1;
 }
 
 button[type="submit"] {
@@ -61,6 +63,7 @@ button[type="submit"] {
   border-radius: 10px;
   background: white;
   color: black;
+  z-index: 1;
 }
 button:hover {
   border-radius: 10px;
@@ -80,6 +83,7 @@ button[disabled] {
 }
 
 #query {
+  z-index: 1;
   width: 90%;
   height: 300px;
   margin: 10px auto;
@@ -102,10 +106,12 @@ button[disabled] {
 }
 
 #editor-container {
+  z-index: 1;
   display: flex;
   margin: auto;
   overflow: hidden;
   flex-direction: column;
+  position: relative;
 }
 
 .break {
@@ -122,9 +128,11 @@ button[disabled] {
 .result-msg {
   font-size: 14px;
   color: white;
+  z-index: 1;
 }
 
 #results {
+  z-index: 1;
   display: flex;
   justify-content: center;
   margin-top: 2vh;
@@ -143,6 +151,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 25px;
+  z-index: 1;
 }
 
 table,
@@ -171,6 +180,7 @@ th:nth-child(1) {
 
 /*Scrollbar*/
 .scrollbar {
+  z-index: 1;
   overflow-y: auto;
   scrollbar-color: transparent transparent;
   border-radius: 10px;
@@ -235,6 +245,8 @@ body {
   max-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  height: 100vh;
+  z-index: 0;
 }
 
 .circles li {
