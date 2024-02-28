@@ -153,7 +153,7 @@ function toggleAnimation(){
 }
 
 // add event handlers
-window.addEventListener("load", function(evt){
+document.addEventListener("DOMContentLoaded", function(evt){
   document.getElementById("logo").style.display = "block";
   document.getElementById("logo").style.visibility = "visible";
 });
