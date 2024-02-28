@@ -153,15 +153,22 @@ function toggleAnimation(){
 }
 
 // add event handlers
-document.addEventListener("DOMContentLoaded", function(evt){
+var img = document.getElementById("logo");
+if(img.complete){
   document.getElementById("logo").style.display = "block";
   document.getElementById("logo").style.visibility = "visible";
-});
+} else {
+  img.onload = () => {
+    document.getElementById("logo").style.display = "block";
+    document.getElementById("logo").style.visibility = "visible";
+  }
+}
 
-document.querySelector("img").addEventListener("mouseover", function(evt){
+
+document.getElementById("logo").addEventListener("mouseover", function(evt){
   this.src='icap.gif';
 });
-document.querySelector("img").addEventListener("mouseout", function(evt){
+document.getElementById("logo").addEventListener("mouseout", function(evt){
   this.src='icap.png';
 });
 
