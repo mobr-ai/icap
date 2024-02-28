@@ -11,21 +11,38 @@
   </head>
   <body>
     <main>
-      <img src="icap.png" alt="ICAP logo" />
-      <br />
-      <br />
-      <div id="editor-container">
-        <form action="#">
-          <label for="query">SPARQL query</label>
-          <!-- <input id="query" alt="Query" type="text" /> -->
-          <!-- <textarea id="query" name="query" rows="16" cols="200"></textarea> -->
-          <div id="query" contenteditable="true" spellcheck="false"></div>
+      <div class="area scrollbar">
+        <ul class="circles">
+          <img src="icap.png" alt="ICAP logo" />
+        <br />
+        <br />
+        <div id="editor-container">
+          <form action="#">
+            <label for="query">SPARQL query</label>
+            <!-- <input id="query" alt="Query" type="text" /> -->
+            <!-- <textarea id="query" name="query" rows="16" cols="200"></textarea> -->
+            <div id="query" contenteditable="true" spellcheck="false"></div>
 
-          <button type="submit">Send!</button>
-        </form>
-        <section id="results">
-          <table id="result-table"></table>
-        </section>
+            <button type="submit">Send!</button>
+          </form>
+          <section id="results" class="scrollbar">
+            <table id="result-table"></table>
+          </section>
+
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        
+        </div>
       </div>
     </main>
   </body>
