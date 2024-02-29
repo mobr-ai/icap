@@ -141,36 +141,36 @@ function displayResults(result){
 var animate = true;
 function toggleAnimation(){
   if(!animate){
-    document.querySelector("body > main > div > ul").style.display = "";
+    document.querySelector("ul").style.display = "";
     document.querySelector("#toggle-animation").innerHTML = "Hide Background";
     animate = true;
   }
   else {
-    document.querySelector("body > main > div > ul").style.display = "none";
+    document.querySelector("ul").style.display = "none";
     document.querySelector("#toggle-animation").innerHTML = "Show Background";
     animate = false;
   }
 }
 
 // add event handlers
-var img = document.getElementById("logo");
-if(img.complete){
-  document.getElementById("logo").style.display = "block";
-  document.getElementById("logo").style.visibility = "visible";
-} else {
-  img.onload = () => {
+window.onload = () => {
+  const img = document.getElementById("logo");
+  if(img.complete){
     document.getElementById("logo").style.display = "block";
     document.getElementById("logo").style.visibility = "visible";
+  } else {
+    img.onload = () => {
+      document.getElementById("logo").style.display = "block";
+      document.getElementById("logo").style.visibility = "visible";
+    }
   }
 }
-
-
-document.getElementById("logo").addEventListener("mouseover", function(evt){
-  this.src='icap.gif';
-});
-document.getElementById("logo").addEventListener("mouseout", function(evt){
-  this.src='icap.png';
-});
+// img.addEventListener("mouseover", function(evt){
+//   this.src='icap.gif';
+// });
+// img.addEventListener("mouseout", function(evt){
+//   this.src='icap.png';
+// });
 
 document.getElementById("query").addEventListener("keydown", function (evt) {
   if (evt.key == "Enter" && !evt.shiftKey) {

@@ -12,15 +12,6 @@ main {
   background: #222263;
 }
 
-img {
-  max-height: 14vh;
-  display: block;
-  margin: auto;
-  z-index: 0;
-  position: relative;
-  visibility: hidden;
-}
-
 form {
   display: flex;
   justify-content: center;
@@ -224,6 +215,23 @@ th:nth-child(1) {
 
 #logo {
   animation: 0.5s ease 0s 1 slideInFromLeft;
+  content: url("icap.png");
+  max-height: 14vh;
+  height: 14vh;
+  margin: auto;
+  z-index: 0;
+  position: relative;
+  visibility: hidden;
+}
+
+#logo:hover {
+  content: url("icap.gif");
+  display: block;
+}
+
+.circles:hover + #logo {
+  content: url("icap.gif");
+  display: block;
 }
 
 /*Animated background*/
@@ -266,7 +274,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
-  z-index: 0;
+  z-index: 1;
+  caret-color: transparent;
 }
 
 .circles li {

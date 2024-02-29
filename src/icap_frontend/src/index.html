@@ -11,42 +11,40 @@
   </head>
   <body>
     <main>
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <img id="logo" src="icap.png" alt="ICAP logo" />        
       <div class="area scrollbar">
-        <img id="logo" src="icap.png" alt="ICAP logo" />
         <br />
         <br />
-        <div id="editor-container">
-          <form action="#">
-            <div class="topbar">
-              <label for="query">SPARQL Query</label>
-              <div class="link-set">
-                <div class="links"><a target="_blank" href="https://mobr.ai/iconto">ICOnto Ontology</a></div>
-                <div class="links"><a id="toggle-animation" href="#">Hide Background</a></div>
+          <div id="editor-container">
+            <form action="#">
+              <div class="topbar">
+                <label for="query">SPARQL Query</label>
+                <div class="link-set">
+                  <div class="links"><a target="_blank" href="https://mobr.ai/iconto">ICOnto Ontology</a></div>
+                  <div class="links"><a id="toggle-animation" href="#">Hide Background</a></div>
+                </div>
               </div>
-            </div>
 
-            <div id="query" contenteditable="true" spellcheck="false"></div>
+              <div id="query" contenteditable="true" spellcheck="false"></div>
 
-            <button type="submit">Send!</button>
-          </form>
-          <section id="results" class="scrollbar">
-            <table id="result-table"></table>
-          </section>
-        </div>
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-
-        
+              <button type="submit">Send!</button>
+            </form>
+            <section id="results" class="scrollbar">
+              <table id="result-table"></table>
+            </section>
+          </div>
         </div>
       </div>
     </main>
