@@ -235,6 +235,11 @@ th:nth-child(1) {
 }
 
 /*Animated background*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .context {
   width: 100%;
   position: absolute;
