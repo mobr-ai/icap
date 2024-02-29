@@ -153,7 +153,18 @@ function toggleAnimation(){
 }
 
 // add event handlers
-window.onload = () => {
+function docReady(fn) {
+  // see if DOM is already available
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+      // call on next available tick
+      setTimeout(fn, 1);
+  } else {
+      document.addEventListener("DOMContentLoaded", fn);
+  }
+}
+
+docReady(function() {
+  // DOM is loaded and ready for manipulation here
   const img = document.getElementById("logo");
   if(img.complete){
     document.getElementById("logo").style.display = "block";
@@ -164,7 +175,20 @@ window.onload = () => {
       document.getElementById("logo").style.visibility = "visible";
     }
   }
-}
+});
+
+// window.onload = () => {
+//   const img = document.getElementById("logo");
+//   if(img.complete){
+//     document.getElementById("logo").style.display = "block";
+//     document.getElementById("logo").style.visibility = "visible";
+//   } else {
+//     img.onload = () => {
+//       document.getElementById("logo").style.display = "block";
+//       document.getElementById("logo").style.visibility = "visible";
+//     }
+//   }
+// }
 // img.addEventListener("mouseover", function(evt){
 //   this.src='icap.gif';
 // });
