@@ -212,20 +212,35 @@ document.getElementById("query").addEventListener("input", highlight);
 document.getElementById("toggle-animation").addEventListener("click", toggleAnimation);
 
 document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const button = e.target.querySelector("button");
+  try {
+    e.preventDefault();
+    const button = e.target.querySelector("button");
 
-  const query = document.getElementById("query").textContent;
+    const query = document.getElementById("query").textContent;
 
-  button.setAttribute("disabled", true);
+    button.setAttribute("disabled", true);
 
-  // interact with backend, calling the query method
-  const result = await icap.sparqlQuery(query);
+    // interact with backend, calling the query method
+    const result = await icap.sparqlQuery(query);
 
-  button.removeAttribute("disabled");
+    button.removeAttribute("disabled");
 
-  // format results
-  displayResults(result);
+    // format results
+    displayResults(result);
 
-  return false;
+    return false;
+  }
+  catch(e){
+    let resultSection = document.getElementById("results");
+
+    // hide table
+    document.getElementById("result-table").style.display = 'none';
+
+    // create result msg
+    let msg = document.createElement('p');
+    msg.classList.add('result-msg')
+    msg.innerHTML = "Oops! Something is wrong, try again later.";
+    resultSection.appendChild(msg);
+  }
+  
 });
