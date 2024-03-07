@@ -2,20 +2,33 @@
 
 ICAP: a platform for users to retrieve structured knowledge from various sources in the ICP
 
-# how to run
+# Installing, testing, deployng
 
-We should install Azle and all of its dependencies:
+## Installing dependencies
+```bash
+# installing Azle and other dependencies
 npm install
+```
 
-Start up your local replica:
+## testing
+```bash
+# tests all functions in this package
+npm test
+```
+
+
+## building and deploying
+```bash
+#Start up your local replica:
 dfx start --background
 dfx canister create icap
 dfx build
 
-Deploy your canister:
+#Deploy your canister:
 dfx deploy icap
+```
 
-# Issues found:
+# Interesting possible corrections to make on ic glossary:
 
 From the Glossary available in https://internetcomputer.org/docs/current/references/glossary :
 

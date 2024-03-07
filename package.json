@@ -26,7 +26,8 @@
     "start": "webpack serve --mode development --env development",
     "deploy:local": "dfx deploy --network=local",
     "deploy:ic": "dfx deploy --network=ic",
-    "generate": "dfx generate icap"
+    "generate": "dfx generate icap",
+    "test": "node src/tests/test.mjs"
   },
   "browser": {
     "fs": false,

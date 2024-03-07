@@ -3,37 +3,32 @@ import { Store, parse, SPARQLToQuery } from 'rdflib'
 //in-memory triplestore
 var tStore
 
-function initStore(iconto) {
+
+/**
+ * Initializes the triplestore with the given knowledge representation
+ * @param {string} iconto - The ontology representation in turtle format
+ * @returns {boolean} true is the ontology was parsed succesfully, false otherwise
+ */
+export function initStore(iconto) {
     tStore = new Store()
     var uri = 'http://www.mobr.ai/ontologies/iconto#'
     var mimeType = 'text/turtle'
 
     try {
         parse(iconto, tStore, uri, mimeType)
-        console.log("parse done")
+        return true
 
     } catch (err) {
-        console.log(err)
+        return false
     }
 }
 
-
-//function match() {
-    // tStore.query(query, result => {
-    //     console.log("result")
-    //     console.log(result["?s"].value)
-    // })
-    // const allTriples = tStore.statementsMatching(undefined, undefined, undefined);
-    // allTriples.forEach(function(triple) {
-    //     if(triple.object.termType === "NamedNode") {
-    //         console.log('<' + triple.object.uri) + '>';
-    //     }
-    //     else  {
-    //         console.log('\'' + triple.object.value + '\'');
-    //     }
-    // })
-//}
-
+/**
+ * Extracts the LIMIT amount from the given SPARQL query.
+ * Useful since rdflib does not support queries with LIMIT.
+ * @param {string} strSparql - SPARQL query
+ * @returns {int} Limit specified in the SPARQL query. 0 if a LIMIT was not specified
+ */
 function getLimit(strSparql) {
     var limit = 0
     const lss = strSparql.toLowerCase()
@@ -44,6 +39,12 @@ function getLimit(strSparql) {
     return limit
 }
 
+/**
+ * Extracts the order by parameters from the given SPARQL query.
+ * @param {string} strSparql - SPARQL query
+ * @param {boolean} hasLimit - If the given SPARQL query has a LIMIT statement in it (see getLimit)
+ * @returns {Array} Array with the order by and if it is desc or not
+ */
 function getOrderBy(strSparql, hasLimit) {
     var orderBy = ''
     var desc = false
@@ -62,13 +63,17 @@ function getOrderBy(strSparql, hasLimit) {
     return [orderBy, desc]
 }
 
-function queryStore(strSparql) {
-    if (tStore.length == 0) {
+
+/**
+ * Executes a SPARQL query
+ * @param {string} strSparql - SPARQL query
+ * @returns {string} JSON representation of the query result
+ */
+export function queryStore(strSparql) {
+    if (!tStore || tStore.length == 0) {
         console.log("triplestore is empty")
         return ""
     }
-    console.log("triplestore size is")
-    console.log(tStore.length)
 
     try {
         const query = SPARQLToQuery(strSparql, null, tStore)
@@ -133,4 +138,10 @@ function queryStore(strSparql) {
     return ""
 }
 
-export {initStore, queryStore}
+/**
+ * A module to represent the key operations in a triplestore: knowledge injection and queries
+ * @module triplestore
+ * @exports initStore
+ * @exports queryStore
+ */
+export default {initStore, queryStore}

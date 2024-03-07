@@ -1,5 +1,5 @@
 import { Canister, query, text, update, Void } from 'azle'
-import { initStore, queryStore } from './triplestore.js'
+import { initStore, queryStore } from './triplestore.mjs'
 
 // in-memory turtle specification
 let iconto = ''

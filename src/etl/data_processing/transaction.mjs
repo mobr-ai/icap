@@ -61,7 +61,7 @@ function transactionToStr(tx) {
         `${txHasTs} "${txTs}" .\n`
 }
 
-function transactionsToStr(txs) {
+export function transactionsToStr(txs) {
     var strTurtleTxs = ""
     for (var i=0; i<txs.length;i++) {
         strTurtleTxs += transactionToStr(txs[i])
@@ -69,4 +69,4 @@ function transactionsToStr(txs) {
     return strTurtleTxs
 }
 
-export {transactionsToStr}
+export default {transactionsToStr}

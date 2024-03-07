@@ -114,7 +114,7 @@ function extractTransactionFromBlock(blockData) {
     return null
 }
 
-async function getLatestTransactions(limit=10) {
+export async function getLatestTransactions(limit=10) {
     var transactions = []
     var currentIndex = await getCurrentBlockIndex()
 
@@ -134,4 +134,4 @@ async function getLatestTransactions(limit=10) {
     return transactions
 }
 
-export {getLatestTransactions}
+export default {getLatestTransactions}

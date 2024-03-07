@@ -20,7 +20,7 @@
 	vann:preferredNamespacePrefix "iconto" ;
 	rdfs:comment "This ontology specification uses W3C RDF Schema and the Web Ontology Language. Its main source of information comes from IC official documentation."@en ;
 	rdfs:seeAlso <https://github.com/mobr-ai/ICOnto> , <https://internetcomputer.org> ;
-	owl:versionInfo "0.0.2" ;
+	owl:versionInfo "0.0.3" ;
 	ns:term_status "unstable" ;
     dc:license <https://www.apache.org/licenses/LICENSE-2.0> .
 
@@ -462,9 +462,9 @@ iconto:ValidSetRule a owl:Class ;
     rdfs:subClassOf owl:Thing .
 
 
-iconto:Voting a owl:Class ;
-    skos:prefLabel "Voting" ;
-    rdfs:comment "Voting is the process through which proposals are selected for adoption and implementation. Its direct participants are the neurons, who both: Submit proposals. Vote on proposals. The voting process is a rather intricate undertaking, involving aspects such as neuron eligibility, voting power, chains of neuron followees etc. This has been designed with security and dependability in mind, and is being continuously improved in order to prevent the concentration of voting power in the hands of just a few neuron owners." ;
+iconto:Vote a owl:Class ;
+    skos:prefLabel "Vote" ;
+    rdfs:comment "Vote is how proposals are selected for adoption and implementation. Its direct participants are the neurons, who both: Submit proposals. Vote on proposals. The voting process is a rather intricate undertaking, involving aspects such as neuron eligibility, voting power, chains of neuron followees etc. This has been designed with security and dependability in mind, and is being continuously improved in order to prevent the concentration of voting power in the hands of just a few neuron owners." ;
     rdfs:subClassOf owl:Thing .
 
 
@@ -481,7 +481,6 @@ iconto:XDR a owl:Class ;
     rdfs:subClassOf owl:Thing .
 
 
-#Account
 iconto:registeredIn a owl:ObjectProperty ;
     rdfs:domain iconto:Account ; 
     rdfs:range iconto:Canister .
@@ -499,7 +498,6 @@ iconto:hasAccountBalance a owl:ObjectProperty ;
     rdfs:range iconto:Balance .
 
 
-#Canister
 iconto:hasCanisterId a owl:DatatypeProperty ;
     rdfs:domain iconto:Canister ;
     rdfs:range xsd:string .
@@ -517,25 +515,21 @@ iconto:hasOutputQueue a owl:ObjectProperty ;
     rdfs:range iconto:OutputQueue .
 
 
-#Induction Pool
 iconto:hasInputQueue a owl:ObjectProperty ;
     rdfs:domain iconto:InductionPool ;
     rdfs:range iconto:InputQueue .
 
 
-#Ingress Message
 iconto:ingressMessageProcessedBy a owl:ObjectProperty ;
     rdfs:domain iconto:IngressMessage ;
     rdfs:range iconto:Replica .
 
 
-#Ingress Message History
 iconto:hasMessageHistoryRecord a owl:ObjectProperty ;
     rdfs:domain iconto:IngressMessageHistory ;
     rdfs:range iconto:IngressMessage .
 
 
-#Input Queue
 iconto:hasInputQueueMessage a owl:ObjectProperty ;
     rdfs:domain iconto:InputQueue ;
     rdfs:range iconto:Message .
@@ -545,7 +539,6 @@ iconto:hasInputQueueCanister a owl:ObjectProperty ;
     rdfs:range iconto:Canister .
 
 
-#Message
 iconto:messageFrom a owl:ObjectProperty ;
     rdfs:domain iconto:Message ;
     rdfs:range iconto:Canister ;
@@ -560,29 +553,44 @@ iconto:messageOrder a owl:DatatypeProperty ;
     rdfs:range xsd:integer .
 
 
-#Neuron
 iconto:hasDissolveDelay a owl:ObjectProperty ;
     rdfs:domain iconto:Neuron ;
     rdfs:range iconto:DissolveDelay .
+
+iconto:hasNeuronAge a owl:DatatypeProperty ;
+    rdfs:domain iconto:Neuron ;
+    rdfs:range xsd:decimal .
+
+iconto:hasNeuronTimestamp a owl:DatatypeProperty ;
+    rdfs:domain iconto:Neuron ;
+    rdfs:range xsd:dateTimeStamp .
 
 iconto:hasNeuronState a owl:ObjectProperty ;
     rdfs:domain iconto:Neuron ;
     rdfs:range iconto:NeuronState .
 
+iconto:hasVotingPower a owl:DatatypeProperty ;
+    rdfs:domain iconto:Neuron ;
+    rdfs:range xsd:integer .
 
-#Node
+iconto:hasNeuronId a owl:DatatypeProperty ;
+    rdfs:domain iconto:Neuron ;
+    rdfs:range xsd:string .
+
+iconto:hasNeuronStakeAmount a owl:DatatypeProperty ;
+    rdfs:domain iconto:Neuron ;
+    rdfs:range xsd:decimal .
+
 iconto:hasNodeReplica a owl:ObjectProperty ;
     rdfs:domain iconto:Node ;
     rdfs:range iconto:Replica .
 
 
-#Principal
 iconto:hasPrincipalIdentity a owl:ObjectProperty ;
     rdfs:domain iconto:Principal ;
     rdfs:range iconto:Identity .
 
 
-#Subnet
 iconto:hasSubnetId a owl:DatatypeProperty ;
     rdfs:domain iconto:Subnet ;
     rdfs:range xsd:string .
@@ -600,7 +608,6 @@ iconto:hasSubnetInductionPool a owl:ObjectProperty ;
     rdfs:range iconto:InductionPool .
 
 
-#Transaction
 iconto:hasTransactionHash a owl:DatatypeProperty ;
     rdfs:domain iconto:Transaction ;
     rdfs:range xsd:string .
@@ -634,4 +641,38 @@ iconto:hasTransactionTo a owl:DatatypeProperty ;
     rdfs:range xsd:string .
 
 
+iconto:hasProposalId a owl:DatatypeProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range xsd:string .
 
+iconto:hasProposalTitle a owl:DatatypeProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range xsd:string .
+
+iconto:hasProposalTopic a owl:DatatypeProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range xsd:string .
+
+iconto:hasProposalStatus a owl:DatatypeProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range xsd:string .
+
+iconto:hasProposalTimestamp a owl:DatatypeProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range xsd:dateTimeStamp .
+
+iconto:hasProposalVote a owl:ObjectProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range iconto:Vote .
+
+iconto:hasProponent a owl:ObjectProperty ;
+    rdfs:domain iconto:Proposal ;
+    rdfs:range iconto:Neuron .
+
+iconto:hasVoter a owl:ObjectProperty ;
+    rdfs:domain iconto:Vote ;
+    rdfs:range iconto:Neuron .
+
+iconto:hasVoteDecision a owl:DatatypeProperty ;
+    rdfs:domain iconto:Vote ;
+    rdfs:range xsd:string .
