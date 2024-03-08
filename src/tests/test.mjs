@@ -1,5 +1,5 @@
 import {initStore, queryStore} from "../triplestore.mjs"
-import { getLatestTransactions } from '../etl/data_extraction/icpExplorer.mjs'
+import { getLatestTransactions } from '../etl/data_extraction/rosettaicp.mjs'
 import { transactionsToStr } from '../etl/data_processing/transaction.mjs'
 
 import { readFile } from 'fs/promises'

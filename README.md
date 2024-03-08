@@ -25,7 +25,7 @@ dfx canister create icap
 dfx build
 
 #Deploy your canister:
-dfx deploy icap
+dfx deploy
 ```
 
 # Interesting possible corrections to make on ic glossary:

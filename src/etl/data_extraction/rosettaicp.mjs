@@ -1,21 +1,18 @@
 const icpName = "Internet Computer"
 const icpNetwork = "00000000000000020101"
 
-const icpExplorer = "https://www.icpexplorer.org"
-const icpRosetaApi = "rosetta-api.internetcomputer.org"
-const icpRosetaApiURL = "https://" + icpRosetaApi 
+const icpRosettaApi = "rosetta-api.internetcomputer.org"
+const icpRosettaApiURL = "https://" + icpRosettaApi 
 
 const icpNetowrkIdentifier = {
     'blockchain': icpName,
     'network': icpNetwork
 }
 
-const icpExplorerHeaders = {
-    "authority": icpRosetaApi,
+const rosettaHeaders = {
+    "authority": icpRosettaApi,
     "accept": "application/json, text/plain, */*",
     "content-type": "application/json;charset=UTF-8",
-    "origin": icpExplorer,
-    "referer": icpExplorer,
     "sec-ch-ua": '"Not_A Brand";v="8", "Chromium";v="120", "Brave";v="120"',
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
@@ -26,10 +23,10 @@ const icpExplorerHeaders = {
 async function httpRequest(endpoint, params) {
     const requestOptions = {
         method: 'POST',
-        headers: icpExplorerHeaders,
+        headers: rosettaHeaders,
         body: JSON.stringify(params)
     }
-    return await fetch(icpRosetaApiURL + endpoint, requestOptions)
+    return await fetch(icpRosettaApiURL + endpoint, requestOptions)
 }
 
 async function getCurrentBlockIndex() {
