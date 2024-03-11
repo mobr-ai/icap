@@ -5,16 +5,16 @@ import { initStore, queryStore } from './triplestore.mjs'
 let iconto = ''
 
 export default Canister({
-    // Query calls complete quickly because they do not go through consensus
+    // Returns the in-memory ontology specification
     getOntology: query([], text, () => {
         return iconto
     }),
-    // Update calls take a few seconds to complete
-    // This is because they persist state changes and go through consensus
+    // Sets a new ontology and (re)initializes the triplestore
     setOntology: update([text], Void, (newOntology) => {
         iconto = newOntology
         initStore(iconto)
     }),
+    // Query the triplestore using SPARQL specification
     sparqlQuery: query([text], text, (strSparql) => {
         const bindings = queryStore(strSparql)
         console.log(bindings)
